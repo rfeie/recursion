@@ -13,7 +13,7 @@ def merge_sort(array, working = [],temp = [], initial = true, finished = false)
 		array = array.collect {|n| [n]}
 		initial == false
 	end
-	if !initial and !array[0].kind_of?(Array) and !finished
+	if !initial and !array[0].kind_of?(Array) and finished
 		return array
 	end
 
@@ -51,17 +51,10 @@ def merge_sort(array, working = [],temp = [], initial = true, finished = false)
 					return merge_sort(array, working, temp, initial, finished)
 
 				end
-#				puts 'tst'
 			end
 
-			#call again
 	end
 	array
-#	[array, working, temp]
 end
 
-#puts merge_sort([]).to_s 
 puts merge_sort([11,6,1,44,6,9,0,1,23,4,32,6,9, 1, 55, 99, 2, 11,6,1,44,6,9,0,1,23,4,32,6,9, 1, 55, 99, 2]).to_s 
-
-#puts [5,6,1,5,6,9,0,1,5,4,32,6].length
-#puts [[5],6,1,5],[6,9,0,1],[5,4,32,6]].length
